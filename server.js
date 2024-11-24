@@ -6,7 +6,7 @@ const connectToDatabase = require('./database/connection')
 connectToDatabase()
     .then(() => {
         try{
-            app.listen(PORT, console.log(`Server is running at http://localhost:${PORT}`))
+            app.listen(process.env.PORT, console.log(`Server is running at http://localhost:${process.env.PORT}`))
         }
         catch(error) {
             console.log(`Can't connect to DB : ${error}`)
